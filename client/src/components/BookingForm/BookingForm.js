@@ -42,6 +42,7 @@ const BookingForm = ({ onSubmit, roomOptions }) => {
             rules={{ required: 'Date is Required' }}
             error={!!errors.date}
             helperText={errors?.date?.message}
+            disablePast={true}
           />
         </Grid>
 

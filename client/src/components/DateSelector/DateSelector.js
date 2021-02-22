@@ -5,7 +5,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { Controller } from 'react-hook-form';
 
 const DateSelector = (props) => {
-  const { label, error, helperText, ...rest } = props;
+  const { label, error, helperText, disablePast, ...rest } = props;
   return (
     <Controller
       {...rest}
@@ -26,6 +26,7 @@ const DateSelector = (props) => {
               label={label}
               error={error}
               helperText={helperText}
+              disablePast={disablePast}
             />
           </MuiPickersUtilsProvider>
         </>
